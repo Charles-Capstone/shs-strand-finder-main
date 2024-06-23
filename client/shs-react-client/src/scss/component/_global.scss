@@ -1,0 +1,37 @@
+@use "../costumize" as *;
+
+body {
+  overflow: hidden;
+
+  #root {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  img {
+    object-fit: cover;
+  }
+
+  .auto-overflow {
+    overflow-y: auto;
+  }
+
+  .responsive-btn {
+    @include media-breakpoint-down(lg) {
+      width: 100% !important;
+      margin-left: 0px !important;
+      margin-right: 0px !important;
+    }
+
+    @include media-breakpoint-down(xl) {
+      margin-bottom: 8px !important;
+    }
+  }
+
+  .sidebar-subject-img {
+    @include media-breakpoint-down(md) {
+      width: 150px;
+    }
+  }
+}
